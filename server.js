@@ -2,6 +2,7 @@ const express = require("express");
 const req = require("express/lib/request");
 const res = require("express/lib/response");
 const app = express()
+const port = 3000
 
 /* Metode Pertama Middleware 
 const zefri = (req, res, next) => {
@@ -49,4 +50,4 @@ app.get("/papah", (req, res) => {
     res.send("ini papah")
 })
 
-app.listen(3000, () => console.log("server starting..."))
+app.listen(port, () => console.log("server starting..."))
