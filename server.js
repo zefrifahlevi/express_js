@@ -45,4 +45,8 @@ app.get("/zefa", (req, res) => {
     res.send("ini azefa")
 })
 
-app.listen(80, () => console.log("server starting..."))
+app.get("/papah", (req, res) => {
+    res.send("ini papah")
+})
+
+app.listen(3000, () => console.log("server starting..."))
