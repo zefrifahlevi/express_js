@@ -34,6 +34,10 @@ const middleware = (req, res, next) => {
 
 app.use(middleware) 
 
+app.get("/", (req,res) => {
+    res.send("Main Utama")
+})
+
 app.get("/olivia", (req, res) => {
     res.send("Hai saya Olivia")
 })
