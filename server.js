@@ -36,25 +36,31 @@ app.use(middleware)
 
 app.get("/", (req,res) => {
     res.send("Main Utama")
+    console.log("masuk ke main")
 })
 
 app.get("/olivia", (req, res) => {
     res.send("Hai saya Olivia")
+    console.log("masuk ke olivia")
 })
 
 app.get("/drian", (req, res) => {
     res.send("Ini Drian")
+    console.log("masuk ke drian")
 })
 
 app.get("/zefa", (req, res) => {
     res.send("ini azefa")
+    console.log("masuk ke azef")
 })
 
 app.get("/papah", (req, res) => {
     res.send("ini papah")
+    console.log("masuk ke papah")
 })
 
 app.get("cheryl", (req, res)=> {
     res.send("ini cheryl")
+    console.log("masuk ke papah")
 })
 app.listen(port, () => console.log("server starting..."))
