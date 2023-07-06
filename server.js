@@ -54,4 +54,7 @@ app.get("/papah", (req, res) => {
     res.send("ini papah")
 })
 
+app.get("cheryl", (req, res)=> {
+    res.send("ini cheryl")
+})
 app.listen(port, () => console.log("server starting..."))
