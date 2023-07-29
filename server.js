@@ -27,7 +27,7 @@ const middleware = (req, res, next) => {
         console.log("Anda masuk via zefri")
     }
     else {
-        res.send("Dilarang!")
+        res.send("Dilarang Masuk!")
         console.log("Tidak Bisa Masuk")
     }
 }
