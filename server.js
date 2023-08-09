@@ -61,6 +61,6 @@ app.get("/papah", (req, res) => {
 
 app.get("/cheryl", (req, res)=> {
     res.send("ini cheryl")
-    console.log("masuk ke menu cheryl")
+    console.log("----masuk ke menu cheryl----")
 })
 app.listen(port, () => console.log("server starting...(Worked!!)"))
