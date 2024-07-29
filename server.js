@@ -49,14 +49,14 @@ app.get("/drian", (req, res) => {
     console.log("----masuk ke menu drian----")
 })
 
-app.get("/zefa", (req, res) => {
-    res.send("ini azefa")
-    console.log("----masuk ke menu azef----")
+app.get("/frost", (req, res) => {
+    res.send("ini frost")
+    console.log("----masuk ke menu frost----")
 })
 
-app.get("/papah", (req, res) => {
-    res.send("ini papah")
-    console.log("----masuk ke menu papah----")
+app.get("/patrzalek", (req, res) => {
+    res.send("ini patrzalek")
+    console.log("----masuk ke menu patrzalek----")
 })
 
 app.get("/cheryl", (req, res)=> {
