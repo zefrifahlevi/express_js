@@ -2,7 +2,7 @@ const express = require("express");
 const req = require("express/lib/request");
 const res = require("express/lib/response");
 const app = express()
-const port = 80
+const port = 80     // Port 3000 = Main, Port 80 = Custom
 
 /* Metode Pertama Middleware 
 const zefri = (req, res, next) => {
@@ -22,13 +22,17 @@ app.get("/drian",zefri, (req, res) => {
 */
 
 const middleware = (req, res, next) => {
-    if (req.query.via == "zefri") {
+    if (req.query.via == "admin") {
+        next()
+        console.log("Anda masuk via admin")
+    }
+    else if (req.query.via == "zefri") {
         next()
         console.log("Anda masuk via zefri")
     }
     else {
         res.send("Dilarang Masuk!")
-        console.log("Tidak Bisa Masuk")
+        console.log("Anda Tidak Bisa Masuk")
     }
 }
 
@@ -59,8 +63,34 @@ app.get("/patrzalek", (req, res) => {
     console.log("----masuk ke menu patrzalek----")
 })
 
-app.get("/cheryl", (req, res)=> {
+app.get("/cheryl", (req, res) => {
     res.send("ini cheryl")
     console.log("----masuk ke menu cheryl----")
 })
-app.listen(port, () => console.log("Server Startinh...(Worked!!)"))
+
+app.get("/zefry", (req, res) => {
+    res.send("Hello Zefri")
+    console.log("Get dari Zefri")
+})
+
+app.get("/Nara", (req, res) => {
+    res.send("Hello Nara")
+    console.log("Get dari Nara")
+})
+
+app.post("/Nara1", (req, res) => {
+    res.send("Hello Nara")
+    console.log("Post dari Nara")
+})
+
+app.put("/Nara2", (req, res) => {
+    res.send("Hello Nara 2")
+    console.log("Put dari Nara 2")
+})
+
+app.delete("/Nara3", (req,res) => {
+    res.send("Hello Nara 3")
+    console.log("Delte dari Nara 3")
+})
+
+app.listen(port, () => console.log("Server Starting...(Worked!!)"))
