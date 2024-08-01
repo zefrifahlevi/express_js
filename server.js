@@ -90,7 +90,7 @@ app.put("/Nara2", (req, res) => {
 
 app.delete("/Nara3", (req,res) => {
     res.send("Hello Nara 3")
-    console.log("Delte dari Nara 3")
+    console.log("Delete dari Nara 3")
 })
 
 app.listen(port, () => console.log("Server Starting...(Worked!!)"))
